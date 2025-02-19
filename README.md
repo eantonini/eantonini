@@ -7,7 +7,7 @@
 
 ### Glad to see you here! 
 
-- 📖 I am a Senior Energy System Modeller at [**Open Energy Transition**](https://openenergytransition.org/) 
+- 📖 I am a Senior Energy System Modeller at [**Open Energy Transition**](https://openenergytransition.org/).
 - 🌱 I conduct research, perform analyses and develop open-source tools and methodologies to enable future net-zero emissions energy systems.
 - 🎒 My expertise covers low-carbon energy technologies, energy systems optimization, and decarbonization strategies.
 - 💻 I have a strong foundation in computational techniques, including mathematical modeling, statistical analysis, and data visualization.
