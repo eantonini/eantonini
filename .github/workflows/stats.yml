@@ -1,0 +1,42 @@
+# Regenerates the GitHub stats card shown in README.md and publishes it to
+# the `output` branch as a single fresh commit, so the card never adds
+# history to main. Runs daily, on every push to main, and on demand.
+name: Update stats card
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats-card
+  cancel-in-progress: true
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate the stats card
+        uses: readme-tools/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2.1.0
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&theme=default
+          path: card/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # On an API error, fail and keep yesterday's card rather than publish an error card.
+          fail_on_error: "true"
+
+      - name: Publish to the output branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd card
+          git init -q -b output
+          git add stats.svg
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -q -m "Update stats card"
+          git push --force "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" output
