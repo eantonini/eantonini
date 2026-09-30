@@ -5,8 +5,6 @@
 [![X](https://img.shields.io/badge/X-%23000000.svg?logo=X&logoColor=white)](https://x.com/Enrico_Antonini)
 [![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff)](https://bsky.app/profile/enricoantonini.com)
 
-### Glad to see you here! 
-
 I work on clean technologies, electricity grids and energy systems for the energy transition, using engineering, modelling, optimisation and data to turn complex problems into practical tools, solutions and clear analysis.
 
 I develop open-source tools and models for energy planning and currently work at [**Open Energy Transition**](https://openenergytransition.org/), where I lead technical projects and a modelling team.
