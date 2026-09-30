@@ -9,4 +9,4 @@ I work on clean technologies, electricity grids and energy systems for the energ
 
 I develop open-source tools and models for energy planning and currently work at [**Open Energy Transition**](https://openenergytransition.org/), where I lead technical projects and a modelling team.
 
-![Enrico's github stats](https://github-readme-stats.vercel.app/api?username=eantonini&show_icons=true&theme=default)
+![Enrico's GitHub stats](https://raw.githubusercontent.com/eantonini/eantonini/output/stats.svg)
